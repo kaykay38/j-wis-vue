@@ -1,21 +1,23 @@
 <template>
   <nav class="navbar">
-    <img src="@/assets/logo.svg" alt="Logo" @click="goHome" class="logo" />
+    <IconJWis :handleClick="handleLogoClick" class="logo" />
   </nav>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-
-export default defineComponent({
-  name: 'Navbar',
+import IconJWis from '@/components/icons/IconJWis.vue'
+export default {
+  name: 'NavBar',
   methods: {
     handleLogoClick() {
+      console.log('Logo clicked')
       this.$router.push('/')
     }
   },
-  components: {}
-})
+  components: {
+    IconJWis
+  }
+}
 </script>
 
 <style scoped>
@@ -39,5 +41,3 @@ export default defineComponent({
   margin: 0px;
 }
 </style>
-import type IconJWisLogoVue from './icons/IconJWisLogo.vue';import type IconJWisLogoVue from
-'@/components/icons/IconJWisLogo.vue';import type IconJWisLogoVue from './icons/IconJWisLogo.vue';

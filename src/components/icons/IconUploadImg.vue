@@ -1,12 +1,13 @@
 <template>
-  <img class="box" src="@/assets/box.svg" :width="width" @click="handleClick" />
+  <img src="@/assets/upload.svg" @click="handleClick" />
 </template>
 <script lang="ts">
 export default {
   props: {
     width: {
       type: String,
-      default: '25'
+      default: '100%',
+      required: false
     },
     handleClick: {
       type: Function,
@@ -15,9 +16,4 @@ export default {
   }
 }
 </script>
-<style>
-.box {
-  display: block;
-  margin: 0 auto 1rem;
-}
-</style>
+<style></style>
